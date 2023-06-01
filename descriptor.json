@@ -1,8 +1,8 @@
 {
-  "name": "download_ROI_mask_manual",
+  "name": "download_ROI_mask",
   "description": "Download ROI mask from nuclei annotations",
   "container-image": {
-    "image": "mizjaggy18/s_download_roi_mask_manual",
+    "image": "mizjaggy18/s_download_roi_mask",
     "type": "singularity"
   },
   "command-line": "echo [CYTOMINE_HOST] [CYTOMINE_PUBLIC_KEY] [CYTOMINE_PRIVATE_KEY] [CYTOMINE_ID_PROJECT] [CYTOMINE_ID_SOFTWARE] [CYTOMINE_ID_IMAGES] [ID_ROI_TERM] [ID_CELL_TERM] [ID_C0_TERM] [ID_C1_TERM] [ID_C2_TERM] [ID_C3_TERM] [MASK_ONLY] [REVIEWED_ONLY]",
