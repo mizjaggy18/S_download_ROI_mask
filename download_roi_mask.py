@@ -2,33 +2,18 @@ from __future__ import print_function, unicode_literals, absolute_import, divisi
 
 
 import sys
+import cv2
 import numpy as np
 import os
-import cytomine
-# import matplotlib.pyplot as plt
+
 import re
-# import pandas as pd
-# import skimage.exposure
+
 from shapely.geometry import Polygon, Point, mapping, shape, box
 from shapely.affinity import affine_transform
-# from shapely import wkt
-# from glob import glob
-# from tifffile import imread
-# from cytomine import Cytomine, models, CytomineJob
+import cytomine
 from cytomine.models import AbstractImage, Annotation, AnnotationTerm, AnnotationCollection, ImageInstanceCollection, Job, User, JobData, Project, ImageInstance, Property
 from cytomine.models.ontology import Ontology, OntologyCollection, Term, RelationTerm, TermCollection
-
-# from csbdeep.utils import Path, normalize
-# from PIL import Image
-
-# import matplotlib.pyplot as plt
-# import time
-import cv2
-# import math
-# import csv
-
 from argparse import ArgumentParser
-# import json
 import logging
 import logging.handlers
 import shutil
