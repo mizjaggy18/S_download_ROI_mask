@@ -1,6 +1,6 @@
 FROM cytomine/software-python3-base
 
-RUN pip install opencv-python
+RUN pip install opencv-python-headless
 RUN pip install numpy
 RUN pip install shapely
 
