@@ -205,10 +205,12 @@ def run(cyto_job, parameters):
                     # print(type(coord))
 
                     x,y,coord2=prep_coor(coord)
-                    roi_width=int(x[1]-x[0])
-                    # print(roi_width)
-                    roi_height=int(y[1]-y[2])
-                    # print(roi_height)
+                    # roi_width=int(x[1]-x[0])
+                    # # print(roi_width)
+                    # roi_height=int(y[1]-y[2])
+                    # # print(roi_height)
+                    roi_width = int(abs(x[1] - x[0]))
+                    roi_height = int(abs(y[1] - y[2]))
                     r1=y[0]
                     c1=x[0]
                     roi_rc[roi_num]=r1,c1
