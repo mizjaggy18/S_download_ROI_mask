@@ -240,8 +240,13 @@ def run(cyto_job, parameters):
                         yy=[]
                         for k in range(0,len(coord2)-1,2):
                             yy.append([float(coord2[k]),float(coord2[k+1])])
-
-                        polygon=Polygon(yy)
+                            
+                        if len(yy) >= 3:
+                            polygon = Polygon(yy)
+                        else:
+                            print("Invalid polygon: Must have at least 3 coordinate points")
+                            continue
+                        # polygon=Polygon(yy)
                         # print('polygon: ',polygon)
 
                         if roi_poly.contains(polygon):
